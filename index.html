@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Interactive Ballon d'Or Poster</title>
+<style>
+  body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+  /* The container that holds your poster image and all the interactive spots */
+  .poster-container {
+    position: relative; /* This is the most important rule! It lets us place hotspots on top. */
+    width: 900px; /* You can adjust the poster size here */
+  }
+
+  /* Your poster image */
+  .main-image {
+    display: block;
+    width: 100%;
+  }
+
+  /* This is the invisible hotspot area. */
+  .hotspot {
+    position: absolute; /* This lets us place it anywhere on the poster */
+    cursor: pointer; /* Shows a hand cursor so the user knows to click/hover */
+  }
+
+  /* This is the information box that is hidden by default. */
+  .info-box {
+    display: none; /* The box is hidden by default */
+    position: absolute;
+    bottom: 105%; /* Default position: Positions the box just ABOVE the hotspot area */
+    left: 50%;
+    transform: translateX(-50%); /* This centers the box above the hotspot */
+    width: 280px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.85); /* Black, semi-transparent background */
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  /* NEW STYLE: This will position the info box BELOW the hotspot */
+  .info-box.position-below {
+    bottom: auto; /* Undoes the 'bottom' rule from the default .info-box */
+    top: 105%; /* Positions the box just BELOW the hotspot */
+  }
+
+  /* --- THE MAGIC RULE --- */
+  /* When you hover over a hotspot... */
+  .hotspot:hover .info-box {
+    display: block; /* ...the info box inside it appears! */
+  }
+  
+  /* The ".hotspot:hover" rule that created the dotted box has been DELETED. */
+
+  /* Special style for the "Learn More" text box */
+  .learn-more-text {
+    background-color: rgba(0,0,0,0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+</style>
+</head>
+<body>
+
+  <div class="poster-container">
+    <!-- The main poster image -->
+    <img src="ballon d'Or.jpeg" class="main-image" alt="An interactive poster of Ballon d'Or trophies">
+
+    <!-- === HOTSPOT: FIFA LOGO === -->
+    <div class="hotspot" style="top: 8%; left: 35%; width: 30%; height: 15%;">
+      <div class="info-box position-below">
+        <p>From 2010 to 2015, the award was temporarily merged with the FIFA World Player of the Year award.</p>
+      </div>
+    </div>
+
+    <!-- === HOTSPOT: CENTER TROPHY (Super Ballon d'Or) === -->
+    <div class="hotspot" style="top: 30%; left: 38%; width: 25%; height: 60%;">
+      <div class="info-box">
+        <h3>The Super Ballon d'Or</h3>
+        <p>An extremely rare award given only once to Alfredo Di Stéfano in 1989 to honour his incredible career. It is considered the most prestigious and rarest trophy in football history.</p>
+      </div>
+    </div>
+
+    <!-- === HOTSPOT: LEFT TROPHY (History) === -->
+    <div class="hotspot" style="top: 48%; left: 5%; width: 25%; height: 35%;">
+      <div class="info-box">
+        <h3>History of the Ballon d'Or</h3>
+        <p>Created by France Football magazine in 1956. From 2010 to 2015, it merged with the FIFA World Player of the Year award to become the FIFA Ballon d'Or, as seen on this trophy.</p>
+      </div>
+    </div>
+
+    <!-- === HOTSPOT: RIGHT TROPHY (The Trophy) === -->
+    <div class="hotspot" style="top: 48%; right: 5%; width: 25%; height: 35%;">
+      <div class="info-box">
+        <h3>The Trophy Design</h3>
+        <p>This is the modern trophy design. It is one of the most iconic and recognizable trophies in all of sports, representing the pinnacle of individual achievement in football.</p>
+      </div>
+    </div>
+
+    <!-- === HOTSPOT: LEARN MORE (Bottom Right) === -->
+    <!-- This hotspot has no hover border because we deleted the style -->
+    <div class="hotspot" style="bottom: 5%; right: 4%; width: 140px; height: 40px;">
+      <div class="learn-more-text">Learn More</div>
+      <div class="info-box">
+        <p>More information and features will be updated soon!</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
