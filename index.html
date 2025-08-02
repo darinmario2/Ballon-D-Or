@@ -1,99 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Interactive Ballon d'Or Poster</title>
-<style>
-  body {
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-    font-family: sans-serif;
-  }
-  .poster-container {
-    position: relative; 
-    width: 900px; 
-  }
-  .main-image {
-    display: block;
-    width: 100%;
-  }
-  .hotspot {
-    position: absolute; 
-    cursor: pointer;
-  }
-  .info-box {
-    display: none; 
-    position: absolute;
-    bottom: 105%; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 280px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.85); 
-    color: white;
-    border-radius: 8px;
-    text-align: center;
-  }
-  .info-box.position-below {
-    bottom: auto; 
-    top: 105%;
-  }
-  .hotspot:hover .info-box {
-    display: block; 
-  }
-  .learn-more-text {
-    background-color: rgba(0,0,0,0.6);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-  }
-
-</style>
+    <title>Ballon d'Or Image Map</title>
 </head>
-<body>
+<body style="background-color: #1a1a1a; text-align: center; color: white; font-family: sans-serif;">
 
-  <div class="poster-container">
-    <img src="ballon d'Or.jpeg" class="main-image" alt="An interactive poster of Ballon d'Or trophies">
+    <h1>Ballon D'Or </h1>
+    <p>Hover your mouse over the different trophies to see information.</p>
 
-    <div class="hotspot" style="top: 8%; left: 35%; width: 30%; height: 15%;">
-      <div class="info-box position-below">
-        <p>From 2010 to 2015, the award was temporarily merged with the FIFA World Player of the Year award.</p>
-      </div>
-    </div>
+    <img src="ballon d'Or.jpeg" alt="Ballon d'Or Poster" width="800" height="600" usemap="#image-map">
 
-    <div class="hotspot" style="top: 30%; left: 38%; width: 25%; height: 60%;">
-      <div class="info-box">
-        <h3>The Super Ballon d'Or</h3>
-        <p>An extremely rare award given only once to Alfredo Di Stéfano in 1989 to honour his incredible career. It is considered the most prestigious and rarest trophy in football history.</p>
-      </div>
-    </div>
+    <map name="image-map">
 
-    <div class="hotspot" style="top: 48%; left: 5%; width: 25%; height: 35%;">
-      <div class="info-box">
-        <h3>History of the Ballon d'Or</h3>
-        <p>Created by France Football magazine in 1956. From 2010 to 2015, it merged with the FIFA World Player of the Year award to become the FIFA Ballon d'Or, as seen on this trophy.</p>
-      </div>
-    </div>
+        <area shape="rect" coords="328,24,479,104" href="#" 
+              title="From 2010 to 2015, the award was temporarily merged with the FIFA World Player of the Year award.">
 
-    <div class="hotspot" style="top: 48%; right: 5%; width: 25%; height: 35%;">
-      <div class="info-box">
-        <h3>The Trophy Design</h3>
-        <p>This is the modern trophy design. It is one of the most iconic and recognizable trophies in all of sports, representing the pinnacle of individual achievement in football.</p>
-      </div>
-    </div>
+        <area shape="circle" coords="161,370,77" href="#" 
+              title="This is the modern FIFA Ballon d'Or trophy, awarded from 2010-2015.">
 
-    <div class="hotspot" style="bottom: 5%; right: 4%; width: 140px; height: 40px;">
-      <div class="learn-more-text">Learn More</div>
-      <div class="info-box">
-        <p>More information and features will be updated soon!</p>
-      </div>
-    </div>
+        <area shape="poly" coords="397,132,359,146,339,162,329,183,327,198,326,217,334,252,326,263,319,288,335,315,340,346,349,350,362,407,328,424,303,484,304,519,520,520,514,476,484,344,481,254,466,179,432,142" href="#" 
+              title="The Super Ballon d'Or is the rarest trophy in history, awarded only once to Alfredo Di Stefano in 1989.">
 
-  </div>
+        <area shape="circle" coords="640,369,80" href="#" 
+              title="The trophy is one of the most iconic and recognizable awards in all of sports.">
+
+    </map>
 
 </body>
 </html>
